@@ -1,0 +1,28 @@
+>> npm init
+
+index.js dosyanı oluştur.
+
+>> npm express
+>> npm i express 
+(node_modules, package.json ve package-lock.json oluştu)
+
+routes klasörü oluşturuyoruz.
+index.js ilk uğranan yer.
+
+>>npm i nodemon
+
+controller class'ı açıldı ve login-register implement edildi.
+router/auth.js oluşturuldu. Auth işlemleri burdan yönlendirilecek.
+
+login ve register async edildi. Try-catch ile error mekanizması eklendi.
+
+models ve service klasörleri oluşturuldu.
+MongoDB için config işlemleri yapılıyor: 
+-config/db.js oluşturuldu.
+-mongo_url .env dosyasına kaydedildi.
+-mongodb ilgili paketler için komutlar:
+>> npm install mongoose -g
+>> npm link mongoose
+>> npm install bcrypt (Security için, şifreleme)
+>> npm install --save dotenv
+>> npm install mongoose
