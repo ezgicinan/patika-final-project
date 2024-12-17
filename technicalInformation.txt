@@ -26,3 +26,9 @@ MongoDB için config işlemleri yapılıyor:
 >> npm install bcrypt (Security için, şifreleme)
 >> npm install --save dotenv
 >> npm install mongoose
+>> npm list mongoose
+>> npm uninstall mongoose
+>> npm install mongoose@8.5.2
+
+Artık DB'ye başarıyla bağlanıyoruz.
+
