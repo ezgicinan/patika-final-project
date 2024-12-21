@@ -76,15 +76,30 @@ async function deleteUser(userParams){
         return {success: true, responseMessage:"User deleted successfully", responseObject: userDeleted.toJSON()};
 
     }catch(e){
-
         console.log('Error ##service #DeleteUser: ', e);
         message = "Error #DeleteUser: " + e.message
         return { success: false, responseMessage: message, responseObject: null};
     }
 }
 
+async function getUserById(userParams){
+    const id = userParams.id;
+    try {
+        const user = await mongooseUser.findById(id);
+        if(!user){
+            return {success:false, responseMessage:"User with ID(" + id + ") not found.", responseObject: null};
+        }
+        return {success: true, responseMessage:"User updated successfully", responseObject:user.toJSON()};        
+    } catch (error) {
+        console.log('Error ##service #getUserById: ', error);
+        message = "Error #DeleteUser: " + error.message
+        return { success: false, responseMessage: message, responseObject: null};    
+    }
+}
+
 module.exports = {
     createUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    getUserById
 }
