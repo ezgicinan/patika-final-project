@@ -16,7 +16,7 @@ router/auth.js oluşturuldu. Auth işlemleri burdan yönlendirilecek.
 
 login ve register async edildi. Try-catch ile error mekanizması eklendi.
 
-models ve service klasörleri oluşturuldu.
+model ve service klasörleri oluşturuldu.
 MongoDB için config işlemleri yapılıyor: 
 -config/db.js oluşturuldu.
 -mongo_url .env dosyasına kaydedildi.
@@ -32,3 +32,15 @@ MongoDB için config işlemleri yapılıyor:
 
 Artık DB'ye başarıyla bağlanıyoruz.
 
+User modelini ekliyoruz. /model/user.js
+User service işlemlerini ekliyoruz, şifreleme ve token işlemleri
+
+>> npm uninstall bcrypt
+>> npm install bcryptjs
+>> npm install jsonwebtoken
+
+Controller/auth.js'e de servis requestlerimizi bağlıyoruz.
+Login ve createUser işlemleri eklendi.
+Update endpointi ve updateUser servisi eklendi.
+Routes user oluşturuldu.
+update ve delete servisleri oluşturuldu.
