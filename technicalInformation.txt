@@ -64,4 +64,8 @@ npm install bcryptjs
 - container id'ni kopayala
 >> docker logs 466a76f4e879
 
-Middleware katmanı oluşturuldu
+Middleware katmanı oluşturuldu. 
+Aradaki istekler için gümrük memuru görevi görüyor.
+User rotasına authMiddleware eklendi.
+
+apache/kafka docker desktop search kısmından çalıştırıldı.

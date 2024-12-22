@@ -89,7 +89,7 @@ async function getUserById(userParams){
         if(!user){
             return {success:false, responseMessage:"User with ID(" + id + ") not found.", responseObject: null};
         }
-        return {success: true, responseMessage:"User updated successfully", responseObject:user.toJSON()};        
+        return {success: true, responseMessage:"User get operation successfull", responseObject:user.toJSON()};        
     } catch (error) {
         console.log('Error ##service #getUserById: ', error);
         message = "Error #DeleteUser: " + error.message
