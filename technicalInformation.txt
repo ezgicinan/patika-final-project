@@ -43,4 +43,25 @@ Controller/auth.js'e de servis requestlerimizi bağlıyoruz.
 Login ve createUser işlemleri eklendi.
 Update endpointi ve updateUser servisi eklendi.
 Routes user oluşturuldu.
-update ve delete servisleri oluşturuldu.
+update, get ve delete servisleri oluşturuldu.
+
+Dockerfile ve docker-compose.yaml oluşturuldu.
+>> node -v
+   v18.14.0
+package.json scripti düzenle:
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+Docker commands:
+>> docker-compose up
+
+Bcrypt hata verirse bunu çalıştır:
+npm uninstall bcrypt
+npm install bcryptjs
+
+>> docker ps
+- container id'ni kopayala
+>> docker logs 466a76f4e879
+
+Middleware katmanı oluşturuldu
