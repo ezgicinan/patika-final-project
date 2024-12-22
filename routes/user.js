@@ -12,5 +12,6 @@ router.post('/korumali',authMiddleware,function test(req,res){
 router.put('/', authMiddleware, userController.updateUser);
 router.delete('/:id', authMiddleware, userController.deleteUser);
 router.get('/:id', authMiddleware, userController.getUserById);
+router.get('/', authMiddleware, userController.getUsers);
 
 module.exports = router;

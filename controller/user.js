@@ -29,7 +29,16 @@ const userController = {
             console.log('Error #userController/getUserById: ', e);
             res.status(400).send({response:{httpStatus:"BAD_REQUEST_GET_USER_OPERATION", error:e.message}})   
         }
-    }
+    },
+    getUsers:async(req,res) => {
+        try {
+            const response = await userService.getUsers();
+            res.status(200).send({response:response})
+        } catch(e) {
+            console.log('Error #userController/getUsers: ', e);
+            res.status(400).send({response:{httpStatus:"BAD_REQUEST_GET_USERS_OPERATION", error:e.message}})   
+        }
+    },
 }
 
 module.exports = userController;

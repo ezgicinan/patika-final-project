@@ -92,7 +92,18 @@ async function getUserById(userParams){
         return {success: true, responseMessage:"User get operation successfull", responseObject:user.toJSON()};        
     } catch (error) {
         console.log('Error ##service #getUserById: ', error);
-        message = "Error #DeleteUser: " + error.message
+        message = "Error #GetUserById: " + error.message
+        return { success: false, responseMessage: message, responseObject: null};    
+    }
+}
+
+async function getUsers(){
+    try {
+        const users = await mongooseUser.find({ password: { $ne: "password" } }) //find();
+        return {success: true, responseMessage:"All user get operation successfull", responseObject:users};        
+    } catch (error) {
+        console.log('Error ##service #getUsers: ', error);
+        message = "Error #GetUsers: " + error.message
         return { success: false, responseMessage: message, responseObject: null};    
     }
 }
@@ -101,5 +112,6 @@ module.exports = {
     createUser,
     updateUser,
     deleteUser,
-    getUserById
+    getUserById,
+    getUsers
 }
