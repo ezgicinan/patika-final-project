@@ -1,0 +1,1061 @@
+{
+	"info": {
+		"_postman_id": "09aa783a-130e-4bea-837a-ae8120940865",
+		"name": "Patika Final Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39422597"
+	},
+	"item": [
+		{
+			"name": "User Operations",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"user1@test.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/auth/login"
+					},
+					"response": [
+						{
+							"name": "Login - false",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"user1@test.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/auth/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "100"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"64-DGLsrofRiSDpSFQNscKmyPaookM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 20:57:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": false,\n        \"responseMessage\": \"Email and password required\",\n        \"responseObject\": null\n    }\n}"
+						},
+						{
+							"name": "Login - success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"user1@test.com\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/auth/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "390"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"186-z+4tYeM/XEok04VGe9kd+wU+lQA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 21:01:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": true,\n        \"responseMessage\": \"Login successful\",\n        \"responseObject\": {\n            \"user\": {\n                \"_id\": \"67672acfef36ad383bc05410\",\n                \"username\": \"user1\",\n                \"email\": \"user1@test.com\",\n                \"createdAt\": \"2024-12-21T20:53:35.037Z\",\n                \"__v\": 0\n            },\n            \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQHRlc3QuY29tIiwiaWF0IjoxNzM0ODE0OTAxLCJleHAiOjE3MzQ4MjIxMDF9.0TkdmLKIRx0gYgY8fH9nTFXeZKe-xv8mLFMbzIu1T34\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"user_sam\",\r\n    \"email\":\"sam@test.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/auth/register"
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"fellowshipTeam\",\r\n    \"email\":\"felloship@test.com\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/auth/register"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d8-c5TW2OTuesDGuPgWseAiyDhPVCs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 20:33:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": true,\n        \"message\": \"User created successfully.\",\n        \"object\": {\n            \"username\": \"fellowshipTeam\",\n            \"email\": \"felloship@test.com\",\n            \"_id\": \"6767262167fb8a87c2c96037\",\n            \"createdAt\": \"2024-12-21T20:33:37.986Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						},
+						{
+							"name": "Register - false",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"fellowshipTeam\",\r\n    \"email\":\"felloship@test.com\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/auth/register"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "107"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6b-ODNM/IHPh3OEwsV5uYOUhCgBl/s\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 20:52:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": false,\n        \"responseMessage\": \"User with this email already exists\",\n        \"respondObject\": null\n    }\n}"
+						},
+						{
+							"name": "Register - False 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"user1\",\r\n    \"email\":\"user1@test.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/auth/register"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "114"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"72-cVy0XgM7LoAkcEIcfHXcLCz5d9c\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 20:53:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": false,\n        \"responseMessage\": \"Email, password and username are required\",\n        \"responseObject\": null\n    }\n}"
+						},
+						{
+							"name": "Register - success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"user1\",\r\n    \"email\":\"user1@test.com\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/auth/register"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "219"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"db-n9H0+v0k6fzph9WxwgDvtiTmf4U\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 20:53:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": true,\n        \"responseMessage\": \"User created successfully.\",\n        \"responseObject\": {\n            \"username\": \"user1\",\n            \"email\": \"user1@test.com\",\n            \"_id\": \"67672acfef36ad383bc05410\",\n            \"createdAt\": \"2024-12-21T20:53:35.037Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						},
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"user_sam\",\r\n    \"email\":\"sam@test.com\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/auth/register"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "220"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dc-J+1fuxuAR71QelIj4HBALW1Noo8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 22 Dec 2024 23:26:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": true,\n        \"responseMessage\": \"User created successfully.\",\n        \"responseObject\": {\n            \"username\": \"user_sam\",\n            \"email\": \"sam@test.com\",\n            \"_id\": \"6768a0086e6f8fe6ba20b767\",\n            \"createdAt\": \"2024-12-22T23:26:00.388Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"673fa256cdc06c71a23403a6\",\r\n    \"email\":\"user1@test.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/user"
+					},
+					"response": [
+						{
+							"name": "Update - success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"673fa256cdc06c71a23403a6\",\r\n    \"email\":\"ezi@test.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/user"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "217"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d9-6LocLHSyA/0CFHqYJUDaV4myALY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 21:37:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": true,\n        \"responseMessage\": \"User updated successfully\",\n        \"responseObject\": {\n            \"_id\": \"673fa256cdc06c71a23403a6\",\n            \"username\": \"ez_cnn\",\n            \"email\": \"ezi@test.com\",\n            \"createdAt\": \"2024-11-21T21:12:54.263Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						},
+						{
+							"name": "Update - false",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"673fa256cdc06c71a23403a6\",\r\n    \"email\":\"user1@test.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/user"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "108"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6c-T3X6fYGiA65Qoh+GXySUs+s0lh0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 21:39:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": false,\n        \"responseMessage\": \"User with this email already exists\",\n        \"responseObject\": null\n    }\n}"
+						},
+						{
+							"name": "Update - false",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"673fa256cdc06c71a23403a8\",\r\n    \"email\":\"user1@test.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/user"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "122"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7a-YrJUo/LWynMNJw71UMLvFs+Z9Bk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 21:41:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": false,\n        \"responseMessage\": \"User with ID(673fa256cdc06c71a23403a8) not found.\",\n        \"responseObject\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8000/api/user/67672397f852112f317c25dd"
+					},
+					"response": [
+						{
+							"name": "Delete - success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8000/api/user/67672397f852112f317c25dd"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "219"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"db-wzBHjCdw/LKJTpd5Luj65+YWQTE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 22:03:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": true,\n        \"responseMessage\": \"User deleted successfully\",\n        \"responseObject\": {\n            \"_id\": \"67672397f852112f317c25dd\",\n            \"username\": \"ezg_ezg\",\n            \"email\": \"ezgi@test.com\",\n            \"createdAt\": \"2024-12-21T20:22:47.234Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						},
+						{
+							"name": "Delete - false",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8000/api/user/67672397f852112f317c25dd"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "122"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7a-0duUMElcmRIi6wQrtxYAe0fM9vw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 22:05:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": false,\n        \"responseMessage\": \"User with ID(67672397f852112f317c25dd) not found.\",\n        \"responseObject\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQHRlc3QuY29tIiwiaWF0IjoxNzM0ODU5MzE0LCJleHAiOjE3MzQ4NjY1MTR9.zEtCp6WfhGmw1iveWPYY1i3V9_Xr3mBzJXSqPk8_mGE"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/user/67672acfef36ad383bc05410"
+					},
+					"response": [
+						{
+							"name": "Get User - success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8000/api/user/674a679f8dfdecd5631e66d5"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "226"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e2-N7uT1tAWJXZ/+fPm4VYVsH5zBEE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 22:15:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": true,\n        \"responseMessage\": \"User updated successfully\",\n        \"responseObject\": {\n            \"_id\": \"674a679f8dfdecd5631e66d5\",\n            \"username\": \"harryp\",\n            \"email\": \"harry_potter@test.com\",\n            \"createdAt\": \"2024-11-30T01:17:19.488Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						},
+						{
+							"name": "Get User - false",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8000/api/user/674a679f8dfdecd5631e66d9"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "122"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7a-bebizJXC6GjvkduL8ckZUYeEaGI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 22:28:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": false,\n        \"responseMessage\": \"User with ID(674a679f8dfdecd5631e66d9) not found.\",\n        \"responseObject\": null\n    }\n}"
+						},
+						{
+							"name": "Get User By Id - 401",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8000/api/user/674a679f8dfdecd5631e66d9"
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "100"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"64-GJnuwI76zeRNOily7QpfxKkbjWQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 22 Dec 2024 09:19:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": false,\n        \"httpStatus\": \"401_Unauthorized\",\n        \"responseMessage\": \"No token provided\"\n    }\n}"
+						},
+						{
+							"name": "Get User By Id - success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8000/api/user/67672acfef36ad383bc05410"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"df-uDHp7/qoatmFrouPOZbJGPnCqNs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 22 Dec 2024 09:24:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": true,\n        \"responseMessage\": \"User get operation successfull\",\n        \"responseObject\": {\n            \"_id\": \"67672acfef36ad383bc05410\",\n            \"username\": \"user1\",\n            \"email\": \"user1@test.com\",\n            \"createdAt\": \"2024-12-21T20:53:35.037Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQHRlc3QuY29tIiwiaWF0IjoxNzM0ODU5MzE0LCJleHAiOjE3MzQ4NjY1MTR9.zEtCp6WfhGmw1iveWPYY1i3V9_Xr3mBzJXSqPk8_mGE"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/user"
+					},
+					"response": [
+						{
+							"name": "Get All users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8000/api/user"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1117"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"45d-ORkGBNrjK78BSEQl9NWCA+CO6AM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 22 Dec 2024 09:47:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"success\": true,\n        \"responseMessage\": \"All user get operation successfull\",\n        \"responseObject\": [\n            {\n                \"_id\": \"673fa256cdc06c71a23403a6\",\n                \"username\": \"ez_cnn\",\n                \"email\": \"ezi@test.com\",\n                \"createdAt\": \"2024-11-21T21:12:54.263Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"674a679f8dfdecd5631e66d5\",\n                \"username\": \"harryp\",\n                \"email\": \"harry_potter@test.com\",\n                \"createdAt\": \"2024-11-30T01:17:19.488Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"674aab70433e4c48bdcef4c0\",\n                \"username\": \"ronw\",\n                \"email\": \"ron_w@test.com\",\n                \"createdAt\": \"2024-11-30T06:06:40.599Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"674aab99433e4c48bdcef4c3\",\n                \"username\": \"atomm\",\n                \"email\": \"atomm@test.com\",\n                \"createdAt\": \"2024-11-30T06:07:21.440Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"676724613e461ac7d65477d2\",\n                \"username\": \"frodo_baggins\",\n                \"email\": \"frodo@test.com\",\n                \"createdAt\": \"2024-12-21T20:26:09.374Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6767262167fb8a87c2c96037\",\n                \"username\": \"fellowshipTeam\",\n                \"email\": \"felloship@test.com\",\n                \"createdAt\": \"2024-12-21T20:33:37.986Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6767263967fb8a87c2c9603a\",\n                \"email\": \"ezz@test.com\",\n                \"createdAt\": \"2024-12-21T20:34:01.979Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"67672acfef36ad383bc05410\",\n                \"username\": \"user1\",\n                \"email\": \"user1@test.com\",\n                \"createdAt\": \"2024-12-21T20:53:35.037Z\",\n                \"__v\": 0\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbUB0ZXN0LmNvbSIsImlhdCI6MTczNDkxMDIzNCwiZXhwIjoxNzM0OTE3NDM0fQ.eyHUlvbWrl4ro2M2wQclnzJ3ZkzyFE5N15ZVfcFG9OY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8000/api/user/order"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": "http://localhost:8000/api/user/order"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "15"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f-SLfc6EdLbWjXbtG/pxBoKSIg4OU\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Dec 2024 00:54:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product Operations",
+			"item": [
+				{
+					"name": "creaateProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbUB0ZXN0LmNvbSIsImlhdCI6MTczNDkxMDIzNCwiZXhwIjoxNzM0OTE3NDM0fQ.eyHUlvbWrl4ro2M2wQclnzJ3ZkzyFE5N15ZVfcFG9OY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"title\": \"WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive\",\r\n    \"price\": 114,\r\n    \"description\": \"Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty\",\r\n    \"category\": \"electronics\",\r\n    \"image\": \"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "Update product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbUB0ZXN0LmNvbSIsImlhdCI6MTczNDkxMDIzNCwiZXhwIjoxNzM0OTE3NDM0fQ.eyHUlvbWrl4ro2M2wQclnzJ3ZkzyFE5N15ZVfcFG9OY"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:8000/api/product"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kafka",
+			"item": [
+				{
+					"name": "Kafka test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:7000/send"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test middleware",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/test"
+			},
+			"response": []
+		}
+	]
+}
