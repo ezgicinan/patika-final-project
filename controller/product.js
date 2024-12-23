@@ -1,4 +1,5 @@
 const productService = require('../service/product')
+const kafka = require('../utils/kafka')
 
 const productController = {
     updateProduct:async(req,res) => {

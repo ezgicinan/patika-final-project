@@ -83,6 +83,8 @@ index.js dosyası oluşturduk, ve express ile igili kısımları yazdık.
 >> npm install express
 >> npm install kafkajs
 
+Bu projede de kafkajs'i kur.
+
 https://www.npmjs.com/package/kafkajs
 https://www.npmjs.com/package/redis
 

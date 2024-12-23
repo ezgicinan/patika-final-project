@@ -1,5 +1,5 @@
 const userService = require('../service/user')
-
+const kafka = require('../utils/kafka')
 const userController = {
     updateUser:async(req,res) => {
         try {
@@ -37,6 +37,19 @@ const userController = {
         } catch(e) {
             console.log('Error #userController/getUsers: ', e);
             res.status(400).send({response:{httpStatus:"BAD_REQUEST_GET_USERS_OPERATION", error:e.message}})   
+        }
+    },
+    createOrder:async(req,res) => {
+        try{
+            /*const response = await userService.createOrder();
+            if(response){
+                
+            }*/
+            console.log('userController -- > order')
+            await kafka.sendMessage('order','test3')
+            res.status(200).send({response:[]})
+        }catch(e){
+            console.log(e,'error')
         }
     },
 }
