@@ -71,3 +71,21 @@ User rotasına authMiddleware eklendi.
 apache/kafka docker desktop search kısmından çalıştırıldı.
 
 Nest.js
+npm joi
+
+kafka diye ayrı bir klasör oluşturuyoruz ve VSCode üzerinden açıyoruz.
+>> npm init
+
+https://medium.com/@amberkakkar01/getting-started-with-apache-kafka-on-docker-a-step-by-step-guide-48e71e241cf2
+Buradan docker-compose.yaml dosya içeriğini aldık.
+>> docker-compose up -d
+index.js dosyası oluşturduk, ve express ile igili kısımları yazdık.
+>> npm install express
+>> npm install kafkajs
+
+https://www.npmjs.com/package/kafkajs
+https://www.npmjs.com/package/redis
+
+https://fakestoreapi.com/products
+
+
