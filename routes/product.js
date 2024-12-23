@@ -12,7 +12,8 @@ router.post('/korumali', authMiddleware, function test(req, res) {
 router.delete('/:id', authMiddleware, productController.deleteProduct);
 router.put('/', authMiddleware, productController.updateProduct);
 router.get('/:id', authMiddleware, productController.getProduct);
-router.get('/', authMiddleware, productController.getProducts);
+//router.get('/', authMiddleware, productController.getProducts);
+router.get('/', productController.getProducts);
 router.post('/', authMiddleware, productController.createProduct);
 
 module.exports = router;

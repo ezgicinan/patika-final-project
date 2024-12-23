@@ -90,4 +90,9 @@ https://www.npmjs.com/package/redis
 
 https://fakestoreapi.com/products
 
+npm start cors
+const cors = require('cors');
+ve allow cors for get products.
+React app tarafına da gerekli yapılar eklendi.
+>> npm install cors
 
